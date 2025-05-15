@@ -9,20 +9,29 @@
 
     <ImageView
         android:id="@+id/imageViewSplash"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="70dp"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/img"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="57dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textViewSplash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img" />
 
     <TextView
         android:id="@+id/textViewSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="208dp"
         android:text="Quiz Game"
         android:textColor="#D90E0E"
-        android:textSize="72sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="427dp" />
+        android:textSize="62sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSplash" />
 </androidx.constraintlayout.widget.ConstraintLayout>

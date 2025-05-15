@@ -3,4 +3,5 @@
 
     <style name="Theme.QuizGame" parent="Theme.AppCompat.Light.DarkActionBar" />
     <style name="Theme.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="Theme.LoginScreen" parent="Theme.AppCompat.Light.DarkActionBar" />
 </resources>
