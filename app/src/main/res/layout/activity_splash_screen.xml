@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="208dp"
         android:text="Quiz Game"
-        android:textColor="#D90E0E"
+        android:textColor="@color/purple_700"
         android:textSize="62sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
