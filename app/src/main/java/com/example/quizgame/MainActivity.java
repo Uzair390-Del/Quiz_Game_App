@@ -3,6 +3,7 @@ package com.example.quizgame;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     TextView signOut;
+    Button startQuiz;
     FirebaseAuth auth= FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             signOut= findViewById(R.id.textViewSignout);
+            startQuiz=findViewById(R.id.buttonStartQuiz);
             signOut.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -32,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
                     Intent i =new Intent(MainActivity.this,LoginActivity.class);
                     startActivity(i);
                     finish();
+                }
+            });
+            startQuiz.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i =new Intent(MainActivity.this, Quiz_Page.class);
+                    startActivity(i);
                 }
             });
             return insets;

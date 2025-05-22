@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView signUp;
     TextView forgetPassword;
     ProgressBar progressBar;
+    GoogleSignInClient googleSignInClient;
     FirebaseAuth auth=FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
+
                 }
             });
             signUp.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +85,9 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
     }
+//    public void signInGoogle(){
+//        GoogleSignInOptions gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build().
+//    }
     public void signInFirebase(String userName, String userPassord) {
         progressBar.setVisibility(View.VISIBLE);
         signIn.setClickable(false);

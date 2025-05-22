@@ -15,11 +15,19 @@
         android:theme="@style/Theme.QuizGame"
         tools:targetApi="31">
         <activity
+            android:name=".Quiz_Page"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Forgot_Password"
             android:exported="true"
-            android:theme="@style/Theme.SplashScreen"
             android:parentActivityName=".LoginActivity"
-            >
+            android:theme="@style/Theme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +38,7 @@
             android:name=".Sign_Up_Page"
             android:exported="true"
             android:parentActivityName=".LoginActivity"
-            android:theme="@style/Theme.QuizGame"></activity>
+            android:theme="@style/Theme.QuizGame" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
